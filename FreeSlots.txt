@@ -1,0 +1,8 @@
+## Title: FreeSlots
+## APIVersion: 100033 100034
+## AddonVersion: 20018
+## Author: |c66ffff|Valandil|r
+## SavedVariables: FreeSlotsSettings
+
+FreeSlots.lua
+FreeSlots.xml
