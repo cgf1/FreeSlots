@@ -1,3 +1,11 @@
+2021-01-25 (v2.1.8)
+
+- Add additional currencies.
+
+- Make what's displayed selectable via addon menu.
+
+- Add /freeslots command to pull up FreeSlots addon menu.
+
 2020-11-02 (v2.18)
 
 - Update api vervsion for Markarth.
