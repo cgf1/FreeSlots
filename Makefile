@@ -8,8 +8,8 @@ all:  ${ALL}
 
 .PHONY: install
 install: all
-	rsync -aR ${ALL:.ok=} ${txt}  $g/$n/
-	rsync -aR ${ALL:.ok=} ${txt}  $e/$n/
+	rsync -aRL ${ALL:.ok=} ${txt}  $g/$n/
+	rsync -aRL ${ALL:.ok=} ${txt}  $e/$n/
 	@touch $e/POC/POC.txt $g/POC/POC.txt
 
 PvpAlerts_Init_Globals.lua.ok: PvpAlerts_Init_Globals.lua
