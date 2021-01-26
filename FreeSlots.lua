@@ -7,7 +7,7 @@ local saved
 local ui
 
 local name = "FreeSlots"
-local version = "2.1.9"
+local version = "2.20"
 local savedVersion = 1
 local wm
 

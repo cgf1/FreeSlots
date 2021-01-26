@@ -1,3 +1,8 @@
+2021-01-25 (v2.20)
+
+- Avoid lua errors caused by collision with another addon which uses
+  similar control names.
+
 2021-01-25 (v2.1.9)
 
 - Don't update control while moving or weird effects occur.
