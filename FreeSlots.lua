@@ -222,9 +222,9 @@ local function update_control(ui, create)
 	if x.rgb then
 	    r, g, b = unpack(x.rgb)
 	end
-	local ct = (create and wm:CreateControl(field, ui, CT_LABEL)) or x.controltag
+	local ct = (create and wm:CreateControl(nil, ui, CT_LABEL)) or x.controltag
 	x.controltag = ct
-	local cs = (create and wm:CreateControl(field .. "Status", ui, CT_LABEL)) or x.controlstatus
+	local cs = (create and wm:CreateControl(nil, ui, CT_LABEL)) or x.controlstatus
 	x.controlstatus = cs
 	if not saved.currencies[field].show then
 	    ct:SetText("") ct:SetHidden(true)
