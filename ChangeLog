@@ -1,3 +1,7 @@
+2021-01-25 (v2.1.9)
+
+- Don't update control while moving or weird effects occur.
+
 2021-01-25 (v2.1.8)
 
 - Add additional currencies.
