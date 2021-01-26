@@ -17,9 +17,15 @@ local function num(n)
     return zo_strformat("<<1>>", ZO_LocalizeDecimalNumber(n))
 end
 
+local moving = false
+function onmovestart()
+    moving = true
+end
+
 function onmovestop()
     saved.wm.x = ui:GetLeft()
     saved.wm.y = ui:GetTop()
+    moving = false
 end
 
 local BufferTable = {}
@@ -184,7 +190,7 @@ local maxx
 local maxx1 = 0
 local maxy
 local function onupdate()
-    if not BufferReached("myaddonupdatebuffer", 1) then
+    if moving or not BufferReached("myaddonupdatebuffer", 1) then
 	return
     end
     local maxxnow = 0
@@ -313,6 +319,7 @@ local function initialize(eventCode, addOnName)
     ui:SetClampedToScreen(true)
     ui:SetMovable(true)
     ui:SetMouseEnabled(true)
+    ui:SetHandler("OnMoveStart", onmovestart)
     ui:SetHandler("OnMoveStop", onmovestop)
     ui:SetDrawLayer(1)
 
